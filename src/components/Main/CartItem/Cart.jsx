@@ -3,15 +3,15 @@ import './Cart.css'
 
 const Cart = (props) => {
     const { allCart } = props
+    console.log(allCart)
 
     let quantity = 0
     let total = 0
     let shipping = 0
     for (const cart of allCart) {
-        cart.quantity = cart.quantity === 0 ? 1 : cart.quantity
         quantity +=  cart.quantity
         total += cart.price * cart.quantity
-        shipping += cart.shipping
+        shipping += cart.shipping * cart.quantity
     }
     const tax = (total * 7) / 100
     const granTotal = total + shipping + tax

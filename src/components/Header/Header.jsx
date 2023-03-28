@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faList } from '@fortawesome/free-solid-svg-icons'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <>
             <nav className="navbar mb-3 navbar-expand-lg bg-dark py-3"  >
@@ -16,19 +16,21 @@ const Header = () => {
                             <li className="nav-item me-4">
                                 <a className="nav-link active text-white " aria-current="page" href="#">Home</a>
                             </li>
-                            <li className="nav-item me-4">
-                                <a className="nav-link active text-white " aria-current="page" href="#">Order Review</a>
-                            </li>
-                            <li className="nav-item me-4">
-                                <a className="nav-link active text-white " aria-current="page" href="#">Manage Inventory</a>
-                            </li>
-                            <li className="nav-item me-4">
-                                <a className="nav-link active text-white " aria-current="page" href="#">Login</a>
-                            </li>
-                        </ul>
-                    </div>
+                            <li className="nav-item me-4 position-relative">
+                                <a className="nav-link active text-white " aria-current="page" href="#">Order Review
+                                    
+                            </a>
+                        </li>
+                        <li className="nav-item me-4">
+                            <a className="nav-link active text-white " aria-current="page" href="#">Manage Inventory</a>
+                        </li>
+                        <li className="nav-item me-4">
+                            <a className="nav-link active text-white " aria-current="page" href="#">Login</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
         </>
     );
 };
